@@ -1,0 +1,28 @@
+div#login_jumbotron.jumbotron{
+  text-align:center;
+  background-color:rgba(255,255,255,0);
+  border-radius:5%;
+  margin:0% !important;
+}
+
+input#login_passwordsenha.form-control{
+  margin-top:5%;
+  margin-bottom:15%;
+}
+
+div#login_divesqueci{
+  margin-top:15%;
+}
+
+p#login_paragraphheader1{
+  margin-bottom:0% !important;
+}
+
+img#login_imagelogo{
+  width:100%;
+}
+
+div#login_divmediacontact.social-links.social-icons{
+  text-align:center;
+}
+

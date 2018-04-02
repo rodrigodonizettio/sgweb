@@ -1,0 +1,68 @@
+input#usuarios_textlogin.form-control{
+  margin-left:5%;
+  width:90%;
+}
+
+input#usuarios_textlogin.form-control{
+  margin-left:5%;
+  width:90%;
+}
+
+input#usuarios_passwordsenha.form-control{
+  margin-left:5%;
+  width:90%;
+}
+
+input#usuarios_passwordrepita.form-control{
+  margin-left:5%;
+  width:90%;
+}
+
+input#usuarios_passwordantiga.form-control{
+  margin-left:5%;
+  width:90%;
+}
+
+form#usuarios_formtextcriar.bootstrap-form-with-validation{
+  text-align:center;
+}
+
+label#usuarios_fieldlogin.control-label{
+  margin-bottom:1%;
+  margin-top:8%;
+}
+
+label#usuarios_fieldsenha.control-label{
+  margin-bottom:1%;
+  margin-top:5%;
+}
+
+label#usuarios_fieldantiga.control-label{
+  margin-bottom:1%;
+  margin-top:5%;
+}
+
+label#usuarios_fieldrepita.control-label{
+  margin-bottom:1%;
+  margin-top:5%;
+}
+
+label#usuarios_fieldtipo.control-label{
+  margin-bottom:1%;
+  margin-top:5%;
+}
+
+button#usuarios_buttoncriar.btn.btn-default{
+  margin-top:3%;
+}
+
+select#usuarios_selectlogin.form-control{
+  margin-left:5%;
+  width:90%;
+}
+
+div#usuarios_rowtipodeconta.row{
+  font-size:larger;
+  margin:0%;
+}
+

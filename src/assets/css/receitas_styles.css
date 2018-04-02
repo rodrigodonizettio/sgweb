@@ -1,0 +1,37 @@
+form#receitas_formtextcriar.bootstrap-form-with-validation{
+  text-align:center;
+}
+
+input#receitas_textnome.form-control{
+  margin-left:5%;
+  width:90%;
+}
+
+select#receitas_selectnome.form-control{
+  margin-left:1%;
+  width:97%;
+}
+
+div#receita_rowetapas.row{
+  font-size:larger;
+  margin:0%;
+}
+
+div#receitas_rownumeroetapas.row{
+  font-size:larger;
+  margin:0%;
+}
+
+.overlay{
+  font-size:xx-large;
+}
+
+.disabledelements{
+  pointer-events:none;
+  opacity:0.4;
+}
+
+label#receitas_fieldnome.control-label{
+  margin-top:8%;
+}
+
