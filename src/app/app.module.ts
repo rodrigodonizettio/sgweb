@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { SecadorComponent } from './components/secador/secador.component';
+import { MainComponent } from './components/main/main.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SecadorComponent } from './components/secador/secador.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    SecadorComponent
+    SecadorComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule
