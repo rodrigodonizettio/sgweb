@@ -10,8 +10,8 @@ import { Router } from "@angular/router";
 
 export class MainComponent {
 
-  constructor(private dataService: DataService,
-              private router:Router) { }
+  constructor(public dataService: DataService,
+              public router:Router) { }
 
   searchDryer(value:string) {
     this.router.navigate( ['search', value] );
