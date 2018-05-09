@@ -11,7 +11,7 @@ export class SecadorComponent {
 
   secador:any = undefined;
 
-  constructor(private route: ActivatedRoute, private dataService: DataService) {
+  constructor(public route: ActivatedRoute, public dataService: DataService) {
 
     route.params.subscribe(parametros => {
       //console.log(parametros);

@@ -8,6 +8,6 @@ import { DataService } from "../../services/data.service";
 })
 export class RelatorioComponent {
 
-  constructor(private dataService: DataService) { }
+  constructor(public dataService: DataService) { }
 
 }

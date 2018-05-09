@@ -11,8 +11,8 @@ export class SearchComponent {
 
   value:string = undefined;
 
-  constructor(private route: ActivatedRoute,
-              private dataService:DataService) {
+  constructor(public route: ActivatedRoute,
+              public dataService:DataService) {
     route.params.subscribe( parametros => {
       this.value = parametros['numero'];
       dataService.filtrarSecadores(this.value);
