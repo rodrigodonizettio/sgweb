@@ -1,3 +1,54 @@
-<p>
-  secador works!
-</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main</title>
+    <link rel="stylesheet" href="../../../assets/css/main_styles.css">
+</head>
+
+<body>
+
+    <section class="animated fadeIn">
+        <div class="container">
+            <div class="row">
+                <!-- TODOS OS SECADORES: infoFirebaseSecadoresData // SECADOR APÓS FILTRO: infoFirebaseSecadoresFiltradosData -->
+                <div *ngIf="secador"> <!-- IF dataService.infoFirebaseSecadoresData isn't null [so there's online dryers in the system] -->
+                    <div class="col-lg-3 col-lg-offset-0 col-md-4 col-sm-6 col-xs-12"
+                        [routerLink]="[ '/secador', secador.numero ]">
+
+                        <h2>Secador-{{ secador.numero }}</h2>
+                        <img [src]="secador.foto" alt="" srcset="">
+                        <h4>Ticket: {{ secador.ticket }}</h4>
+                        <h4>Hora Início: {{ secador.horaInicio }}</h4>
+                        <h4>Operador: {{ secador.operador }}</h4>
+                        <h4>Temperatura-A: {{ secador.sensorTemperaturaA }} [°C]</h4>
+                        <h4>Temperatura-B: {{ secador.sensorTemperaturaB }} [°C]</h4>
+                        <h4>Temperatura-C: {{ secador.sensorTemperaturaC }} [°C]</h4>
+                        <h4>Temperatura-D: {{ secador.sensorTemperaturaD }} [°C]</h4>
+                        <h4>Temperatura-E: {{ secador.sensorTemperaturaE }} [°C]</h4>
+                        <h4>Temperatura-F: {{ secador.sensorTemperaturaF }} [°C]</h4>
+                        <h4>Temperatura-G: {{ secador.sensorTemperaturaG }} [°C]</h4>
+                        <h4>Temperatura-H: {{ secador.sensorTemperaturaH }} [°C]</h4>
+                        <h4>Umidade: {{ secador.sensorUmidade }} %</h4>
+                        <h4>CO2: {{ secador.sensorCO2 }} %</h4>
+                        <h4>Nível-A: {{ secador.sensorNivelA }} %</h4>
+                        <h4>Nível-B: {{ secador.sensorNivelB }} %</h4>
+                        <br />
+                        <h4>Veneziana: {{ secador.releVeneziana }}</h4>
+                        <h4>Lenha: {{ secador.releLenha }}</h4>
+                        <h4>Carga: {{ secador.releCarga }}</h4>
+                        <h4>Descarga: {{ secador.releDescarga }}</h4>
+                        <h4>Exaustor: {{ secador.releExaustor }}</h4>
+                        <h4>Incêndio: {{ secador.releIncendio }}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

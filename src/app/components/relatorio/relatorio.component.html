@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Relatórios</title>
+  <link rel="stylesheet" href="../../../assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../assets/css/relatorios_styles.css">
+</head>
+
+<body>
+
+  <section class="animated fadeIn">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand navbar-link" routerLink="/main">
+            <img src="../../../assets/img/SquareLogoCampotech_800x430px_BGTransp.png" id="header_logocampotech">SGWeb - Relatórios</a>
+          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navcol-1">
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div align="center" *ngIf="!dataService.flagFirebaseAmostraDataLoaded">
+      <h2>Carregando</h2>
+      <!-- SVG-Loading-Round-Circle -->
+      <div class="loader loader--style1" title="Carregando! Por favor, aguarde." align="center">
+        <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+          <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+        s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+        c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"
+          />
+          <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+        C22.32,8.481,24.301,9.057,26.013,10.047z">
+            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite"
+            />
+          </path>
+        </svg></div>
+    
+      
+      
+      
+      <p>Aguarde . . .</p>
+    </div>
+
+
+    
+
+
+
+
+
+    <div *ngIf="dataService.infoFirebaseAmostraData.length > 0 && dataService.flagFirebaseAmostraDataLoaded" class="container">
+      <table class="table animated fadeIn">
+        <thead>
+          <tr>
+            <th scope="col">Ticket</th>
+            <th scope="col">Número</th>
+            <th scope="col">Hora Início</th>
+            <th scope="col">Operador</th>
+            <th scope="col">Umidade</th>
+            <th scope="col">CO2</th>
+            <th scope="col">Temperatura A</th>
+            <th scope="col">Temperatura B</th>
+            <th scope="col">Temperatura C</th>
+            <th scope="col">Temperatura D</th>
+            <th scope="col">Temperatura E</th>
+            <th scope="col">Temperatura F</th>
+            <th scope="col">Temperatura G</th>
+            <th scope="col">Temperatura H</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let amostra of dataService.infoFirebaseAmostraData">
+            <th scope="row">1</th>
+            <td>{{ amostra.ticket }}</td>
+            <td>{{ amostra.numeroSecador }}</td>
+            <td>{{ amostra.horaInicio }}</td>
+            <td>{{ amostra.operador }}</td>
+            <td>{{ amostra.sensorUmidade }}</td>
+            <td>{{ amostra.sensorCO2 }}</td>
+            <td>{{ amostra.sensorTemperaturaA }}</td>
+            <td>{{ amostra.sensorTemperaturaB }}</td>
+            <td>{{ amostra.sensorTemperaturaC }}</td>
+            <td>{{ amostra.sensorTemperaturaD }}</td>
+            <td>{{ amostra.sensorTemperaturaE }}</td>
+            <td>{{ amostra.sensorTemperaturaF }}</td>
+            <td>{{ amostra.sensorTemperaturaG }}</td>
+            <td>{{ amostra.sensorTemperaturaH }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+
+
+
+
+  
+  <div id="abacate"></div>
+
+
+<!--
+  <script src="../../../assets/js/jquery.min.js"></script>
+  <script src="../../../assets/js/relatorios_highcharts.js"></script>
+  <script src="../../../assets/js/modules/relatorios_exporting.js"></script>
+  <script src="../../../assets/js/relatorios_grafico.js"></script>
+-->
+
+
+
+  <script src="../../../assets/js/jquery.min.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="../../../assets/js/relatorios_grafico.js"></script>
+
+  
+  
+
+
+
+</body>
+
+</html>

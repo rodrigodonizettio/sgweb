@@ -1,16 +1,42 @@
-<div>
-  <div class="jumbotron" id="login_jumbotron">
-    <h1>Campotech - SGWeb</h1>
-    <p id="login_paragraphheader1">Controle a secagem de seus grãos.</p>
-    <p>Em qualquer hora. Em qualquer lugar. </p>
-    <p><a class="btn btn-default" role="button" href="http://www.campotech.com" id="login_buttonconhecer">Conhecer a Campotech!</a></p>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="login-card"><img src="assets/img/SquareLogoCampotech_800x800px.png" id="login_imageusuario" class="profile-img-card">
-  <p class="profile-name-card"> </p>
-  <form class="form-signin"><span class="reauth-email"> </span>
-      <input class="form-control" type="text" id="login_textusuario" placeholder="Login de Usuário">
-      <input class="form-control" type="password" required="" placeholder="Senha" id="login_passwordsenha"><a class="btn btn-primary btn-block btn-lg btn-signin" role="button" href="main.html" id="login_buttonacessar">Acessar SGWeb</a></form>
-  <div id="login_divesqueci"><a href="#" id="login_linkesqueci" class="forgot-password">Esqueci minha senha</a></div>
-</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <link rel="stylesheet" href="../../../assets/css/login_styles.css">
+</head>
+
+<body>
+
+  <section class="animated fadeIn">
+
+    <div class="jumbotron" id="login_jumbotron">
+      <h1>Campotech - SGWeb</h1>
+      <p id="login_paragraphheader1">Controle a secagem de seus grãos.</p>
+      <p>Em qualquer hora. Em qualquer lugar. </p>
+      <p>
+        <a class="btn btn-default" role="button" href="http://www.campotech.com" id="login_buttonconhecer">Conhecer a Campotech</a>
+      </p>
+    </div>
+
+    <div class="login-card">
+      <img src="assets/img/SquareLogoCampotech_800x800px.png" id="login_imageusuario" class="profile-img-card">
+      <p class="profile-name-card"> </p>
+      <form class="form-signin">
+        <span class="reauth-email"> </span>
+        <input class="form-control" type="text" id="login_textusuario" placeholder="Login de Usuário">
+        <input class="form-control" type="password" required="" placeholder="Senha" id="login_passwordsenha">
+        <a class="btn btn-primary btn-block btn-lg btn-signin" role="button" routerLink="/main" id="login_buttonacessar">Acessar SGWeb</a>
+      </form>
+      <div id="login_divesqueci">
+        <a routerLink="/login" id="login_linkesqueci" class="forgot-password">Esqueci minha senha</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

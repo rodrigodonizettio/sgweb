@@ -1,24 +1,23 @@
-<footer>
+<footer class="animated fadeIn">
     <div class="row">
     <div class="col-md-4 col-sm-12 col-xs-12 footer-navigation">
         <div><img src="assets/img/SquareLogoCampotech_800x430px_BGTransp.png" id="login_imagelogo"></div>
     </div>
     <div class="col-md-4 col-sm-12 col-xs-12 footer-contacts">
         <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
-            <p><span id="spanEndereco" class="new-line-span">Rua Cônego Adolfo Carneiro, 970 </span><span id="spanEndereco" class="new-line-span">Bairro Loteamento do Vale</span> Santa Rita do Sapucaí - MG - Brasil</p>
+            <p><span id="spanEndereco" class="new-line-span">{{ dataService.infoFooterData.addressRuaENumero }}</span><span id="spanEndereco" class="new-line-span">{{ dataService.infoFooterData.addressBairro }}</span>{{ dataService.infoFooterData.addressCEP }}</p>
         </div>
         <div><i class="fa fa-phone footer-contacts-icon"></i>
-            <p class="footer-center-info email text-left"> +55 (35) 3471-7722</p>
+            <p class="footer-center-info email text-left">{{ dataService.infoFooterData.phone }}</p>
         </div>
-        <div><i class="fa fa-envelope footer-contacts-icon"></i><a href="mailto:suporte@campotech.com?subject=Suporte">suporte@campotech.com </a></div>
+        <div><i class="fa fa-envelope footer-contacts-icon"></i><a href="{{ dataService.infoFooterData.mailto }}">{{ dataService.infoFooterData.email }}</a></div>
     </div>
     <div class="col-md-4 col-sm-12 col-xs-12 footer-about">
         <div>
-            <h4>Sobre a Campotech</h4>
-            <p> Fundada em 2011 na cidade de Santa Rita do Sapucaí, a Campotech produz soluções tecnológicas que automatizam o processo de secagem de grãos. Garantindo confiabilidade e economia de mão-de-obra, seus produtos asseguram além do controle
-                automático de temperatura, também seu gerenciamento contínuo à distância. </p>
-            <div id="login_divmediacontact" class="social-links social-icons"><a href="https://pt-br.facebook.com/campotech/"><i class="fa fa-facebook"></i></a><a href="https://pt.linkedin.com/company/campotech"><i class="fa fa-linkedin"></i></a>
-                <a href="https://www.youtube.com/channel/UCu0F4JBCJRRuUT6K_XO2Dfg"><i class="fa fa-youtube"></i></a>
+            <h4>{{ dataService.infoFooterData.aboutTitle }}</h4>
+            <p>{{ dataService.infoFooterData.aboutText }}</p>
+            <div id="login_divmediacontact" class="social-links social-icons"><a href= "{{ dataService.infoFooterData.facebook }}" target="_blank"><i class="fa fa-facebook"></i></a><a href="{{ dataService.infoFooterData.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="{{ dataService.infoFooterData.youtube }}" target="_blank"><i class="fa fa-youtube"></i></a>
                 <p class="company-name">High-Z Vale Indústrial Eletrônica LTDA © {{ ano }} </p>
             </div>
         </div>

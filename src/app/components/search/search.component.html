@@ -14,23 +14,9 @@
     <section class="animated fadeIn">
         <div class="container">
             <div class="row">
-
-                <div>
-                    <div id="imaginary_container"> 
-                        <div class="input-group stylish-input-group">
-                            <input #searchInput (change)="searchDryer( searchInput.value )" (keyup.enter)="searchDryer( searchInput.value )" type="number" class="form-control"  placeholder="Número do Secador" >
-                            <span class="input-group-addon">
-                                <button type="submit">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                </button>  
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- TODOS OS SECADORES: infoFirebaseSecadoresData // SECADOR APÓS FILTRO: infoFirebaseSecadoresFiltradosData -->
-                <div *ngIf="dataService.infoFirebaseSecadoresData"> <!-- IF dataService.infoFirebaseSecadoresData isn't null [so there's online dryers in the system] -->
-                    <div *ngFor="let secador of dataService.infoFirebaseSecadoresData" 
+                <div *ngIf="dataService.infoFirebaseSecadoresFiltradosData"> <!-- IF dataService.infoFirebaseSecadoresData isn't null [so there's online dryers in the system] -->
+                    <div *ngFor="let secador of dataService.infoFirebaseSecadoresFiltradosData" 
                         class="col-lg-3 col-lg-offset-0 col-md-4 col-sm-6 col-xs-12"
                         [routerLink]="[ '/secador', secador.numero ]">
 

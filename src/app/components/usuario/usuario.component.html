@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Usuários</title>
+    <link rel="stylesheet" href="../../../assets/css/usuarios_styles.css">
+</head>
+
+<body>
+
+
+    <section class="animated fadeIn">
+        <div id="usuarios_body">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand navbar-link" routerLink="/main">
+                            <img src="../../../assets/img/SquareLogoCampotech_800x430px_BGTransp.png" id="header_logocampotech">SGWeb - Usuários</a>
+                        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li role="presentation">
+                                <a routerLink="/usuarios" id="usuarios_linkcriar">
+                                    <i class="fa fa-user-plus"></i> Criar </a>
+                            </li>
+                            <li role="presentation">
+                                <a routerLink="/usuarios" id="usuarios_linkeditar">
+                                    <i class="fa fa-user"></i> Editar </a>
+                            </li>
+                            <li role="presentation">
+                                <a routerLink="/usuarios" id="usuarios_linkexcluir">
+                                    <i class="fa fa-user-times"></i> Excluir </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="usuarios_divcriar" class="collapse">
+                <form id="usuarios_formtextcriar" class="bootstrap-form-with-validation">
+                    <h2 class="text-center" id="usuarios_headingcriacao">Criação de Usuário </h2>
+                    <div class="form-group" id="usuarios_formnome">
+                        <label class="control-label" for="text-input" id="usuarios_fieldlogin">Login </label>
+                        <input class="form-control" type="text" name="text-input" id="usuarios_textlogin" placeholder="Login do Usuário">
+                        <label class="control-label" for="text-input" id="usuarios_fieldsenha">Senha </label>
+                        <input class="form-control" type="password" id="usuarios_passwordsenha" placeholder="Senha do Usuário">
+                        <label class="control-label" for="text-input" id="usuarios_fieldrepita">Repita a Senha </label>
+                        <input class="form-control" type="password" id="usuarios_passwordrepita" placeholder="Digite a Senha Novamente">
+                        <label class="control-label" for="text-input" id="usuarios_fieldtipo">Tipo de Conta</label>
+                        <div class="row" id="usuarios_rowtipodeconta">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="radio" id="usuarios_divadministrador">
+                                    <label class="control-label">
+                                        <input type="radio" name="radio-group" id="usuarios_radioadministrador">Administrador</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="usuarios_rowtipo">
+                                <div class="radio" id="usuarios_divoperador">
+                                    <label class="control-label">
+                                        <input type="radio" name="radio-group" checked="" id="usuarios_radiooperador">Operador</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" id="usuarios_formbuttoncriar">
+                        <button class="btn btn-default" type="button" id="usuarios_buttoncriar">Criar Usuário
+                            <i class="glyphicon glyphicon-ok"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div id="usuarios_diveditar" class="collapse">
+                <form id="usuarios_formtextcriar" class="bootstrap-form-with-validation">
+                    <h2 class="text-center" id="usuarios_headingcriacao">Edição de Usuário </h2>
+                    <div class="form-group" id="usuarios_formnome">
+                        <label class="control-label" for="text-input" id="usuarios_fieldlogin">Login </label>
+                        <select class="form-control" id="usuarios_selectlogin">
+                            <optgroup label="This is a group">
+                                <option value="12" selected="">This is item 1</option>
+                                <option value="13">This is item 2</option>
+                                <option value="14">This is item 3</option>
+                            </optgroup>
+                        </select>
+                        <label class="control-label" for="text-input" id="usuarios_fieldsenha">Senha </label>
+                        <input class="form-control" type="password" id="usuarios_passwordsenha" placeholder="Senha do Usuário">
+                        <label class="control-label" for="text-input" id="usuarios_fieldrepita">Repita a Senha </label>
+                        <input class="form-control" type="password" id="usuarios_passwordrepita" placeholder="Digite a Senha Novamente">
+                        <label class="control-label" for="text-input" id="usuarios_fieldantiga">Senha Antiga</label>
+                        <input class="form-control" type="password" id="usuarios_passwordantiga" placeholder="Digite a Senha Novamente">
+                        <label class="control-label" for="text-input" id="usuarios_fieldtipo">Tipo de Conta</label>
+                        <div class="row" id="receitas_rownumeroetapas">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="radio" id="usuarios_divadministrador">
+                                    <label class="control-label">
+                                        <input type="radio" name="radio-group" id="receitas_radio1etapa">Administrador</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="usuarios_rowtipo">
+                                <div class="radio" id="usuarios_divoperador">
+                                    <label class="control-label">
+                                        <input type="radio" name="radio-group" checked="" id="receitas_radio2etapas">Operador</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" id="usuarios_formbuttoncriar">
+                        <button class="btn btn-default" type="button" id="usuarios_buttoneditar">Editar Usuário
+                            <i class="glyphicon glyphicon-ok"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div id="usuarios_divexcluir" class="collapse">
+                <form id="receitas_formtextcriar" class="bootstrap-form-with-validation">
+                    <h2 class="text-center" id="usuarios_headingexclusao">Exclusão de Usuário</h2>
+                    <div class="form-group" id="receitas_formnome">
+                        <label class="control-label" for="text-input" id="usuarios_fieldnome">Nome </label>
+                        <select class="form-control" id="usuarios_selectnome">
+                            <optgroup label="This is a group">
+                                <option value="12" selected="">This is item 1</option>
+                                <option value="13">This is item 2</option>
+                                <option value="14">This is item 3</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group" id="receitas_formbuttoncriar">
+                        <button class="btn btn-default" type="button" id="usuarios_buttonexcluir">Excluir Usuário
+                            <i class="glyphicon glyphicon-ok"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <script src="../../../assets/js/jquery.min.js"></script>
+            <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
+            <script src="../../../assets/js/receitas_navbaroutsideclickhideitems.js"></script>
+            <script src="../../../assets/js/receitas_createrecipe.js"></script>
+            <script src="../../../assets/js/receitas_inputnumberminmaxlimiter.js"></script>
+            <script src="../../../assets/js/receitas_getradiobuttonselectedsetothers.js"></script>
+            <script src="../../../assets/js/receitas_editrecipe.js"></script>
+            <script src="../../../assets/js/receitas_deleterecipe.js"></script>
+            <script src="../../../assets/js/main_loadsecador.js"></script>
+            <script src="../../../assets/js/usuarios_createuser.js"></script>
+            <script src="../../../assets/js/usuarios_edituser.js"></script>
+            <script src="../../../assets/js/usuarios_deleteuser.js"></script>
+            <script src="../../../assets/js/usuarios_navbaroutsideclickhideitems.js"></script>
+            <script src="../../../assets/js/relatorios_exporting.js"></script>
+            <script src="../../../assets/js/relatorios_highcharts.js"></script>
+            <script src="../../../assets/js/relatorios_grafico.js"></script>
+        </div>
+    </section>
+
+</body>
+
+</html>
